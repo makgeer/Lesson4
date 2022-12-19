@@ -19,7 +19,7 @@
 -->
 <script>
   "use strict";
-  // EMSCA5
+  // ECMAS5
   function ProductES5(productname, price) {
     this.productname = productname;
     this.price = price;
@@ -34,10 +34,22 @@
   product1.discount();
   console.log(`Наименование ${product1.productname}, цена ${product1.price}`)
 
-  // EMSCA6
-  klass ProductES6(){
-    
+  // ECMAS6
+  class ProductES6 { 
+    constructor(productname, price){
+      this.productname = productname;
+      this.price = price;
   }
+
+    discount() {
+      this.price *= .75;
+    }
+  }
+  const product = new ProductES6(`Капуста`, 110)
+
+  console.log(`Наименование ${product.productname}, цена ${product.price}`);
+  product.discount();
+  console.log(`Наименование ${product.productname}, цена ${product.price}`)
 </script>
 </body>
 </html>
