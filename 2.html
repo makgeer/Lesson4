@@ -50,7 +50,32 @@
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  function PostES5(author, text, date){
+    this.author = author;
+    this.text = text;
+    this.Date = date;
+  }
+
+  PostES5.prototype.date = function () {
+    if (this.text === length || this.text !== length ) {
+      this.Date = new Date();
+      document.write(Date);
+    }
+  }
+    
+
+  
+  const date = Date();
+  const poste = new PostES5('Fill', 'text', date);
+
+  poste.date()
+  const poste1 = new PostES5("Fill", "ghjfkdl;lk;lkdf", date);
+  console.log(`${poste.author} + ${poste.Date}`)
+  poste1.date();
+  console.log(`${poste1.author} + ${poste1.Date}`);
+  const poste2 = new PostES5("Fill", "lskds;ww", date);
+  poste2.date();
+  console.log(`${poste2.author} + ${poste2.Date}`);
 </script>
 </body>
 </html>
