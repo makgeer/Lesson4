@@ -76,6 +76,48 @@
   const poste2 = new PostES5("Fill", "lskds;ww", date);
   poste2.date();
   console.log(`${poste2.author} + ${poste2.Date}`);
+
+  // ES6
+
+class PostES6{
+    constructor(author, text) {
+      this.author = author;
+      this.text = text;
+      this.date = new Date();
+    }
+  
+
+    edit(text) {
+  // моё решение было таким if (this.text !== length){ this.date = new Data}
+      this.text = text;
+      this.Date = new Date();
+  }
+}
+
+class AttachedPostES6 extends PostES6 {
+    highlighted = false;
+
+    makeTextHighlighted () {
+      this.highlighted = true;
+      this.date = new Date;
+    }
+}
+
+const text_1 = new PostES6('Fill', 'text');
+poste.edit();
+const text_2 = new PostES6("Fill", "ghjfkdl;lk;lkdf");
+console.log(`${poste.author} + ${poste.date}`);
+poste1.edit();
+console.log(`${poste1.author} + ${poste1.date}`);
+const text_3 = new PostES6("Fill", "lskds;ww");
+poste2.edit();
+console.log(`${poste2.author} + ${poste2.date}`);
+const hight = new AttachedPostES6('Fill', 'text')
+console.log(hight)
+hight.makeTextHighlighted();
+hight.edit("Новый закрепленный пост")
+console.log(hight);
+
 </script>
 </body>
 </html>
